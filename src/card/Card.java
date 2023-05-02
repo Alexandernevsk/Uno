@@ -9,7 +9,7 @@ public abstract class Card {
 
     public abstract boolean isPlayabe(Card previousCard);
 
-    public Rank getRang() {
+    public Rank getRank() {
         return rank;
     }
 }

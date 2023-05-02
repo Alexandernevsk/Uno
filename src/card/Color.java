@@ -1,5 +1,5 @@
 package card;
 
-public enum Kleur {
+public enum Color {
     yellow,green,blue,red;
 }

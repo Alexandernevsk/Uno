@@ -1,21 +1,21 @@
 package card;
 
 public class ColoredCard extends Card{
-    public  final Kleur kleur;
+    public  final Color color;
 
-    public ColoredCard(Rank rank, Kleur kleur) {
+    public ColoredCard(Rank rank, Color color) {
         super(rank);
-        this.kleur = kleur;
+        this.color = color;
     }
 
     @Override
     public boolean isPlayabe(Card previousCard) {
         ColoredCard card=(ColoredCard) previousCard;
-        return card.getRang()== rank ||card.getKleur()==kleur;
+        return card.getRank()== rank ||card.getColor()== color;
 
     }
 
-    public Kleur getKleur() {
-        return kleur;
+    public Color getColor() {
+        return color;
     }
 }
