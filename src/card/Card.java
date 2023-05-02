@@ -1,9 +1,15 @@
 package card;
 
 public abstract class Card {
-    public  final Kleur kleur;
-    public Card(Kleur kleur) {
-        this.kleur = kleur;
+    public  final Rang rang;
+
+    protected Card(Rang rang) {
+        this.rang = rang;
     }
+
     public abstract boolean isPlayabe(Card previousCard);
+
+    public Rang getRang() {
+        return rang;
+    }
 }
