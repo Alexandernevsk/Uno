@@ -14,19 +14,17 @@ public class Deck {
         Deck deck = new Deck();
         deck.createDeck();
         System.out.println(deck.drawPile);
+        System.out.println(deck.drawPile.size());
     }
     public void createDeck() {
         drawPile = new ArrayList<>();
         for(Rank rank : Rank.values()){
             for(Color color: Color.values()){
-                if(rank.getRank() < 10) {
+                if(rank.getRank() < 50) {
                     drawPile.add(new ColoredCard(rank, color));
                     if(rank.getRank() != 0) {
                         drawPile.add(new ColoredCard(rank, color));
                     }
-                }else if(rank.getRank() < 50){
-                    drawPile.add((new ColoredCard(rank, color)));
-                    drawPile.add((new ColoredCard(rank, color)));
                 }else drawPile.add(new SpecialCard(rank));
             }
         }
