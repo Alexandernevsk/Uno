@@ -6,4 +6,5 @@ public abstract class Card {
         this.kleur = kleur;
     }
     public abstract boolean isPlayabe(Card previousCard);
+
 }
