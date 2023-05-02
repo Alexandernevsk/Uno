@@ -18,4 +18,9 @@ public class ColoredCard extends Card{
     public Color getColor() {
         return color;
     }
+
+    @Override
+    public String toString() {
+        return rank.toString() + color.toString();
+    }
 }
