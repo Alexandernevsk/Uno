@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="801cce4b-42fb-45c1-b07d-b22ab1bdcd9d" name="Changes" comment="range still unimpl, pseudo code added">
-      <change afterPath="$PROJECT_DIR$/src/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/card/rankfunctions" beforeDir="false" afterPath="$PROJECT_DIR$/src/card/rankfunctions" afterDir="false" />
+    <list default="true" id="801cce4b-42fb-45c1-b07d-b22ab1bdcd9d" name="Changes" comment="base card push">
+      <change beforePath="$PROJECT_DIR$/src/card/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/card/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/card/ColoredCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/card/ColoredCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/card/Kleur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/card/Color.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,14 +75,7 @@
       <option name="project" value="LOCAL" />
       <updated>1683026696807</updated>
     </task>
-    <task id="LOCAL-00004" summary="range still unimpl, pseudo code added">
-      <created>1683027975742</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1683027975742</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,8 +91,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="base card push" />
-    <MESSAGE value="range still unimpl" />
-    <MESSAGE value="range still unimpl, pseudo code added" />
-    <option name="LAST_COMMIT_MESSAGE" value="range still unimpl, pseudo code added" />
+    <option name="LAST_COMMIT_MESSAGE" value="base card push" />
   </component>
 </project>
