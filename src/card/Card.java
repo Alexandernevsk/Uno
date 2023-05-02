@@ -1,15 +1,15 @@
 package card;
 
 public abstract class Card {
-    public  final Rang rang;
+    public  final Rank rank;
 
-    protected Card(Rang rang) {
-        this.rang = rang;
+    protected Card(Rank rank) {
+        this.rank = rank;
     }
 
     public abstract boolean isPlayabe(Card previousCard);
 
-    public Rang getRang() {
-        return rang;
+    public Rank getRang() {
+        return rank;
     }
 }
