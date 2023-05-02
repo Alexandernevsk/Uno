@@ -1,0 +1,14 @@
+waarde zero tot nine, niks
+ +voeg de kaart toe aan de discard pile
+ waarde
+ draw_2 ,wild_draw_4: pak volgende speler ->
+  geef hun optie:
+  leg draw_x kaart op, terug naar ":" voor volgende speler
+  of
+  pak van de stapel keer {totaal opgelegd tijdens strijd}
+
+  skip: de volgende speler slaat zijn/haar beurt over
+  reverse: de game flow gaat de andere kant op
+
+  wild_pick_color : pak beurtspeler -> laat hem/haar Kleur k kiezen > zet de kleur op k
+
