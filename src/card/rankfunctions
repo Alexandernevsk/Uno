@@ -5,7 +5,7 @@ waarde zero tot nine, niks
   geef hun optie:
   leg draw_x kaart op, terug naar ":" voor volgende speler
   of
-  pak van de stapel keer {totaal opgelegd tijdens strijd}
+  pak van de stapel keer {sum(draw_x)totaal opgelegd tijdens strijd}
 
   skip: de volgende speler slaat zijn/haar beurt over
   reverse: de game flow gaat de andere kant op
