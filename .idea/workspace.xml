@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="801cce4b-42fb-45c1-b07d-b22ab1bdcd9d" name="Changes" comment="player base">
+    <list default="true" id="3f05a69f-05ca-40fa-a242-0215723fa530" name="Changes" comment="Empty">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Deck/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deck/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,26 +45,6 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="Deck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Deck.Deck" />
-      <module name="Uno" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Deck.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Deck" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -101,14 +82,7 @@
       <option name="project" value="LOCAL" />
       <updated>1683026829748</updated>
     </task>
-    <task id="LOCAL-00005" summary="player base">
-      <created>1683029710660</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1683029710660</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,7 +98,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="base card push" />
-    <MESSAGE value="player base" />
-    <option name="LAST_COMMIT_MESSAGE" value="player base" />
+    <option name="LAST_COMMIT_MESSAGE" value="base card push" />
   </component>
 </project>
