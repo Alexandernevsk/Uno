@@ -24,7 +24,7 @@ public class Deck {
                     if(rank.getRank() != 0) {
                         drawPile.add(new ColoredCard(rank, color));
                     }
-                }else if(rank.getRank() > 9 && rank.getRank() < 50){
+                }else if(rank.getRank() < 50){
                     drawPile.add((new ColoredCard(rank, color)));
                     drawPile.add((new ColoredCard(rank, color)));
                 }else drawPile.add(new SpecialCard(rank));
