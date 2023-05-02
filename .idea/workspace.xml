@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="801cce4b-42fb-45c1-b07d-b22ab1bdcd9d" name="Changes" comment="base card push">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/card/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/card/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/card/ColoredCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/card/ColoredCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/card/Kleur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/card/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
