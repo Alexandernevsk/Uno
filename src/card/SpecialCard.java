@@ -1,12 +1,17 @@
 package card;
 
 public class SpecialCard extends Card{
-    protected SpecialCard(Rank rank) {
+    public SpecialCard(Rank rank) {
         super(rank);
     }
 
     @Override
     public boolean isPlayabe(Card previousCard) {
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return rank.toString();
     }
 }
