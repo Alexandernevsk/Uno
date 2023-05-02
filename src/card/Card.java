@@ -12,4 +12,6 @@ public abstract class Card {
     public Rank getRank() {
         return rank;
     }
+
+
 }
