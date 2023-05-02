@@ -16,4 +16,10 @@ public class Player {
     public void addCard(Card card){
         cards.add(card);
     }
+    //Editable placeholder choose method for choosing card from player's hand.
+    public Card chooseCard(int choose) {
+        if (choose < cards.size()) {
+            return cards.get(choose);
+        }else throw new IllegalArgumentException("Invalid input");
+    }
 }
