@@ -34,6 +34,10 @@ public class Deck {
     public Card draw (){
         Card card = drawPile.get(0);
         drawPile.remove(0);
+
+        if(drawPile.isEmpty())
+            reshuffle();
+
         return card;
     }
 
@@ -45,7 +49,7 @@ public class Deck {
         this.drawPile = drawPile;
 
     }
-    public void reshuffle (){
+    private void reshuffle (){
         drawPile = discardPile;
         shuffle();
     }
