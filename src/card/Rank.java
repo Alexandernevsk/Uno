@@ -45,7 +45,9 @@ public enum Rank implements Pestable{
         public void execute(UnoController controller) {}
     },draw_2(20) {
         @Override
-        public void execute(UnoController controller) {}
+        public void execute(UnoController controller) {
+            controller.moveTurn();
+        }
     },skip(20) {
         @Override
         public void execute(UnoController controller) {
@@ -59,7 +61,7 @@ public enum Rank implements Pestable{
     },wild_draw_four(50) {
         @Override
         public void execute(UnoController controller) {
-
+            controller.moveTurn();
 
         }
     },wild_choose_color(50) {
