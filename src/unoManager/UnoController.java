@@ -1,6 +1,7 @@
 package unoManager;
 
 import Deck.Deck;
+import card.Card;
 import card.Color;
 import player.Player;
 
@@ -32,8 +33,14 @@ public class UnoController {
          execute function on card.Rank
 
           */
+        if(players[currentPlayer].chooseCard(0).isPlayabe(deck.getDiscardPile().get(0))){
+            deck.setDiscardPile((players[currentPlayer].chooseCard(0)));
+            players[currentPlayer].playCard(players[currentPlayer].chooseCard(0));
+        }else players[currentPlayer].addCard(deck.draw());
+
      }
      public  Player getActivePlayer(){return  players[currentPlayer];}
     public void switchDirection(){moveDirection=!moveDirection;}
+
 
 }
