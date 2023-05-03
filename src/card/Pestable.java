@@ -1,5 +1,7 @@
 package card;
 
+import unoManager.UnoController;
+
 public interface Pestable {
-    public void execute();
+    public void execute(UnoController controller);
 }
