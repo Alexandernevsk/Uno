@@ -2,8 +2,11 @@ package Uno;
 
 import Deck.Deck;
 import card.Card;
+import card.Rank;
+import card.SpecialCard;
 import player.Player;
 
+import java.lang.reflect.WildcardType;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -80,12 +83,15 @@ public class Game {
 
 
                 if(choice > 0 && choice <= activePlayer.getHand().getAllCardsInHand().size() + 1){
-                    if(choice > activePlayer.getHand().getAllCardsInHand().size()){
+                    if(choice > activePlayer.getHand().getAllCardsInHand().size()) {
                         Card drawnCard = deck.draw();
                         System.out.println("You have drawn " + drawnCard.toString());
                         activePlayer.getHand().getAllCardsInHand().add(drawnCard);
                         break;
                     }else if(deck.isValidPlay(activePlayer.getHand().getAllCardsInHand().get(choice - 1))) {
+                        if(activePlayer.getHand().getAllCardsInHand().get(choice) instanceof SpecialCard  specialCard){
+                            if()
+                            }
                         deck.playCard(activePlayer.getHand().getAllCardsInHand().get(choice - 1));
                         activePlayer.getHand().getAllCardsInHand().remove(choice - 1);
                         break;
@@ -93,6 +99,7 @@ public class Game {
                 }
                 System.out.println("Invalid choice, try again");
             }
+
 
             if(activePlayer.getHand().getAllCardsInHand().size() == 0){
                 System.out.println("Congrats!! player " + activePlayer.getName() + " has won!");
@@ -105,7 +112,6 @@ public class Game {
         }
 
     }
-
 
     public void nextPlayer(){
         int currentActiveIndex = players.indexOf(activePlayer);
@@ -123,5 +129,13 @@ public class Game {
             System.out.println();
         }
     }
+    public  void makeDraw(){activePlayer.getHand().addCard(deck.draw());}
+    public void moveTurn(){ players.get(players.indexOf(activePlayer) + 1);}
+    public void switchDirection(){
+        players.get(players.indexOf(activePlayer) -1);
+    }
 
+    public Player getActivePlayer() {
+        return activePlayer;
+    }
 }

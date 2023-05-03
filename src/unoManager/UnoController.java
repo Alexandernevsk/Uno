@@ -32,8 +32,10 @@ public class UnoController {
      }
      public  Player getActivePlayer(){return  players[currentPlayer];}
     public void switchDirection(){moveDirection=!moveDirection;}
+    public void checkSymbol(){
 
-    //public  void makeDraw(){players[currentPlayer].addCard(deck.draw());}
+    }
+    public  void makeDraw(){players[currentPlayer].getHand().addCard(deck.draw());}
 
 
 
