@@ -1,9 +1,73 @@
 package card;
 
-public enum Rank {
+import unoManager.UnoController;
 
-    zero(0),one(1),two(2),three(3),four(4),five(5),six(6),seven(7),eight(8),nine(9)
-    ,draw_2(20),skip(20),reverse(20),wild_draw_four(50),wild_choose_color(50);
+public enum Rank implements Pestable{
+
+    zero(0){
+        @Override
+        public void execute(UnoController controller) {
+
+        }
+    },one(1) {
+        @Override
+        public void execute(UnoController controller) {
+
+        }
+    },two(2) {
+        @Override
+        public void execute(UnoController controller) {
+
+        }
+    },three(3) {
+        @Override
+        public void execute(UnoController controller) {
+
+        }
+    },four(4) {
+        @Override public void execute(UnoController controller) {
+
+        }
+    },five(5) {
+        @Override
+        public void execute(UnoController controller) {}
+    },six(6) {
+        @Override
+        public void execute(UnoController controller) {}
+    },seven(7) {
+        @Override
+        public void execute(UnoController controller) {}
+    },eight(8) {
+        @Override
+        public void execute(UnoController controller) {}
+    },nine(9) {
+        @Override
+        public void execute(UnoController controller) {}
+    },draw_2(20) {
+        @Override
+        public void execute(UnoController controller) {}
+    },skip(20) {
+        @Override
+        public void execute(UnoController controller) {
+            controller.moveTurn();
+        }
+    },reverse(20) {
+        @Override
+        public void execute(UnoController controller) {
+            controller.switchDirection();
+        }
+    },wild_draw_four(50) {
+        @Override
+        public void execute(UnoController controller) {
+
+
+        }
+    },wild_choose_color(50) {
+        @Override
+        public void execute(UnoController controller) {
+
+        }
+    };
     final int rank;
 
     Rank(int rank) {
