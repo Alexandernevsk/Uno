@@ -1,6 +1,7 @@
 package unoManager;
 
 import Deck.Deck;
+import card.Card;
 import card.Color;
 import player.Player;
 
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 public class UnoController {
 
     private  boolean moveDirection;
+    private Card lastCard;
 
     Player[] players;
 
@@ -29,7 +31,7 @@ public class UnoController {
          else if player has no valid cards? : player.drawCard return current turn
          else back to first step <<
          player removes card from his has this and adds it to this.deck.discardpile[0];
-         execute function on card.Rank
+         execute function on card.Rank and set lastCard=card;
 
           */
      }
