@@ -1,11 +1,7 @@
 package unoManager;
 
 import Deck.Deck;
-import card.Card;
-import card.Color;
 import player.Player;
-
-import java.util.ArrayList;
 
 public class UnoController {
 
@@ -16,7 +12,7 @@ public class UnoController {
     int currentPlayer;
      Deck deck;
 
-     public  void moveTurn(){
+     public void moveTurn(){
          currentPlayer+=moveDirection?1:-1;
 
          if(currentPlayer<0){currentPlayer=players.length-1;}
@@ -36,11 +32,14 @@ public class UnoController {
         if(players[currentPlayer].chooseCard(0).isPlayabe(deck.getDiscardPile().get(0))){
             deck.setDiscardPile((players[currentPlayer].chooseCard(0)));
             players[currentPlayer].playCard(players[currentPlayer].chooseCard(0));
-        }else players[currentPlayer].addCard(deck.draw());
-
+        }else makeDraw();
      }
      public  Player getActivePlayer(){return  players[currentPlayer];}
     public void switchDirection(){moveDirection=!moveDirection;}
+
+    public  void makeDraw(){players[currentPlayer].addCard(deck.draw());}
+
+
 
 
 }
