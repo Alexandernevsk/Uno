@@ -10,7 +10,6 @@ import java.util.ArrayList;
 public class UnoController {
 
     private  boolean moveDirection;
-    private Card lastCard;
 
     Player[] players;
 
