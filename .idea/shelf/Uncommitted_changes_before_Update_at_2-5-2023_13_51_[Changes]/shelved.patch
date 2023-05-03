@@ -1,0 +1,140 @@
+Index: src/Deck/Deck.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Deck;\r\n\r\nimport card.Card;\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic class Deck {\r\n    ArrayList<Card> drawPile;\r\n    ArrayList<Card> discardPile;\r\n\r\n    public void createDeck(){\r\n        for(int rank = 0; rank < 9; rank++){\r\n\r\n        }\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Deck/Deck.java b/src/Deck/Deck.java
+--- a/src/Deck/Deck.java	(revision 4b7f2bd98d3486861d88df62a43cbcf68615c604)
++++ b/src/Deck/Deck.java	(date 1683028219496)
+@@ -1,16 +1,33 @@
+ package Deck;
+ 
+-import card.Card;
++import card.*;
++import card.Color;
+ 
++import java.awt.*;
+ import java.util.ArrayList;
+ 
+ public class Deck {
+     ArrayList<Card> drawPile;
+     ArrayList<Card> discardPile;
+ 
+-    public void createDeck(){
+-        for(int rank = 0; rank < 9; rank++){
+-
++    public static void main(String[] args) {
++        Deck deck = new Deck();
++        deck.createDeck();
++        System.out.println(deck);
++    }
++    public void createDeck() {
++        drawPile = new ArrayList<>();
++        for(Rank rank : Rank.values()){
++            for(Color color: Color.values()){
++                if(rank.getRank() < 10) {
++                    drawPile.add(new ColoredCard(rank, color));
++                    if(rank.getRank() != 0) {
++                        drawPile.add(new ColoredCard(rank, color));
++                    }else if(rank.getRank() > 9){
++                        drawPile.add((new SpecialCard(rank)));
++                    }
++                }
++            }
+         }
+     }
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"801cce4b-42fb-45c1-b07d-b22ab1bdcd9d\" name=\"Changes\" comment=\"base card push\">\r\n      <change beforePath=\"$PROJECT_DIR$/src/card/Card.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/card/Card.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/card/ColoredCard.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/card/ColoredCard.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/card/Kleur.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/card/Color.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Enum\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2PEJZyfuVCOTfAqE5kAhKUs6YOS\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"801cce4b-42fb-45c1-b07d-b22ab1bdcd9d\" name=\"Changes\" comment=\"\" />\r\n      <created>1683016368880</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1683016368880</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"base card push\">\r\n      <created>1683016806978</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683016806978</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"base card push\">\r\n      <created>1683017462220</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683017462220</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"base card push\">\r\n      <created>1683026696807</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683026696807</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"base card push\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"base card push\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 4b7f2bd98d3486861d88df62a43cbcf68615c604)
++++ b/.idea/workspace.xml	(date 1683028219501)
+@@ -1,13 +1,13 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="AutoImportSettings">
+-    <option name="autoReloadType" value="SELECTIVE" />
+-  </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="801cce4b-42fb-45c1-b07d-b22ab1bdcd9d" name="Changes" comment="base card push">
+-      <change beforePath="$PROJECT_DIR$/src/card/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/card/Card.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/card/ColoredCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/card/ColoredCard.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/card/Kleur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/card/Color.java" afterDir="false" />
++    <list default="true" id="801cce4b-42fb-45c1-b07d-b22ab1bdcd9d" name="Changes" comment="Empty">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_05_2023_11_32__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_05_2023_11_32__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_05_2023_13_28__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_05_2023_13_28__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_05_2023_13_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_05_2023_13_29__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Deck/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deck/Deck.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/card/SpecialCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/card/SpecialCard.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -17,8 +17,6 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
+-        <option value="Interface" />
+-        <option value="Enum" />
+         <option value="Class" />
+       </list>
+     </option>
+@@ -38,11 +36,7 @@
+   <component name="PropertiesComponent">{
+   &quot;keyToString&quot;: {
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+   }
+ }</component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+@@ -54,28 +48,6 @@
+       <option name="presentableId" value="Default" />
+       <updated>1683016368880</updated>
+     </task>
+-    <task id="LOCAL-00001" summary="base card push">
+-      <created>1683016806978</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1683016806978</updated>
+-    </task>
+-    <task id="LOCAL-00002" summary="base card push">
+-      <created>1683017462220</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1683017462220</updated>
+-    </task>
+-    <task id="LOCAL-00003" summary="base card push">
+-      <created>1683026696807</created>
+-      <option name="number" value="00003" />
+-      <option name="presentableId" value="LOCAL-00003" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1683026696807</updated>
+-    </task>
+-    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -89,8 +61,4 @@
+       </map>
+     </option>
+   </component>
+-  <component name="VcsManagerConfiguration">
+-    <MESSAGE value="base card push" />
+-    <option name="LAST_COMMIT_MESSAGE" value="base card push" />
+-  </component>
+ </project>
+\ No newline at end of file
