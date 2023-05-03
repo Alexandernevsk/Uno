@@ -5,24 +5,40 @@ import card.Rank;
 import java.util.ArrayList;
 
 public class Player {
-    final ArrayList<Card>cards;
+    private String name;
+    private Hand hand;
 
-    public Player(ArrayList<Card> cards) {
-        this.cards = cards;
+    public Player(String name){
+        this.name = name;
+        this.hand = new Hand();
     }
-    public void playCard(Card card){
-        cards.remove(card);
 
+    public Player(String name, Hand hand){
+        this.name = name;
+        this.hand = hand;
     }
-    public void addCard(Card card){
-        cards.add(card);
+
+    public Hand getHand(){
+        return hand;
     }
-    //Editable placeholder choose method for choosing card from player's hand.
-    public Card chooseCard(int choose) {
-        if (choose < cards.size() && choose >= 0) {
-            return cards.get(choose);
-        }else throw new IllegalArgumentException("Invalid input");
+
+    public String getName(){
+        return name;
     }
+
+//    public void playCard(Card card){
+//        cards.remove(card);
+//
+//    }
+//    public void addCard(Card card){
+//        cards.add(card);
+//    }
+//    //Editable placeholder choose method for choosing card from player's hand.
+//    public Card chooseCard(int choose) {
+//        if (choose < cards.size() && choose >= 0) {
+//            return cards.get(choose);
+//        }else throw new IllegalArgumentException("Invalid input");
+//    }
 
 
 }

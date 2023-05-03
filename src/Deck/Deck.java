@@ -11,12 +11,22 @@ public class Deck {
     ArrayList<Card> drawPile;
     ArrayList<Card> discardPile;
 
-    public static void main(String[] args) {
-        Deck deck = new Deck();
-        deck.createDeck();
-        System.out.println(deck.drawPile);
-        System.out.println(deck.drawPile.size());
+//    public static void main(String[] args) {
+//        Deck deck = new Deck();
+//        deck.createDeck();
+//        deck.shuffle();
+//        System.out.println(deck.drawPile);
+//        System.out.println(deck.drawPile.size());
+//    }
+
+
+    public Deck() {
+        createDeck();
+        shuffle();
+        discardPile = new ArrayList<>();
     }
+
+
     public void createDeck() {
         drawPile = new ArrayList<>();
         for(Rank rank : Rank.values()){
@@ -31,12 +41,17 @@ public class Deck {
         }
     }
 
+    public boolean isValidPlay(Card card){
+        return card.isPlayabe(lastPlayedCard());
+    }
+
     public Card draw (){
         Card card = drawPile.get(0);
         drawPile.remove(0);
 
-        if(drawPile.isEmpty())
+        if(drawPile.isEmpty()) {
             reshuffle();
+        }
 
         return card;
     }
@@ -62,7 +77,8 @@ public class Deck {
         return discardPile;
     }
 
-    public void setDiscardPile(Card card) {
+    //Play a card by adding it to the discard pile.
+    public void playCard(Card card) {
         discardPile.add(card);
     }
 }
