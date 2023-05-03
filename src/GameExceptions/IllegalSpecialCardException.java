@@ -1,0 +1,4 @@
+package GameExceptions;
+
+class InvalidException {
+}

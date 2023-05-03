@@ -73,8 +73,8 @@ public class Deck {
         return drawPile;
     }
 
-    public ArrayList<Card> getDiscardPile() {
-        return discardPile;
+    public Card lastPlayedCard() {
+        return discardPile.get(discardPile.size()-1);
     }
 
     //Play a card by adding it to the discard pile.
