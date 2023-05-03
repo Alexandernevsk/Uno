@@ -1,0 +1,20 @@
+Index: src/Deck/Deck.java
+===================================================================
+diff --git a/src/Deck/Deck.java b/src/Deck/Deck.java
+--- a/src/Deck/Deck.java	
++++ b/src/Deck/Deck.java	
+@@ -1,4 +1,14 @@
+ package Deck;
+ 
++import card.Card;
++
++import java.util.ArrayList;
++
+ public class Deck {
++   private ArrayList<Card> drawPile;
++   private ArrayList<Card> discardPile = new ArrayList<>();
++
++   public Deck(ArrayList<Card> drawPile) {
++      
++   }
+ }

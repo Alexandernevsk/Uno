@@ -1,0 +1,25 @@
+Index: src/Deck/Deck.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Deck;\r\n\r\npublic class Deck {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Deck/Deck.java b/src/Deck/Deck.java
+--- a/src/Deck/Deck.java	(revision 389e0ba3b5922bd2d2f9b1df7565696346f1dda5)
++++ b/src/Deck/Deck.java	(date 1683025091228)
+@@ -1,4 +1,14 @@
+ package Deck;
+ 
++import card.Card;
++
++import java.util.ArrayList;
++
+ public class Deck {
++   private ArrayList<Card> drawPile;
++   private ArrayList<Card> discardPile = new ArrayList<>();
++
++   public Deck(ArrayList<Card> drawPile) {
++      
++   }
+ }

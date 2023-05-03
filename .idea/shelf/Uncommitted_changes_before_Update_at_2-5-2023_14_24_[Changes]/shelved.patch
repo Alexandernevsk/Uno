@@ -1,0 +1,54 @@
+Index: src/Deck/Deck.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Deck;\r\n\r\nimport card.*;\r\nimport card.Color;\r\n\r\nimport java.awt.*;\r\nimport java.util.ArrayList;\r\n\r\npublic class Deck {\r\n    ArrayList<Card> drawPile;\r\n    ArrayList<Card> discardPile;\r\n\r\n    public static void main(String[] args) {\r\n        Deck deck = new Deck();\r\n        deck.createDeck();\r\n        System.out.println(deck.drawPile);\r\n    }\r\n    public void createDeck() {\r\n        drawPile = new ArrayList<>();\r\n        for(Rank rank : Rank.values()){\r\n            for(Color color: Color.values()){\r\n                if(rank.getRank() < 10) {\r\n                    drawPile.add(new ColoredCard(rank, color));\r\n                    if(rank.getRank() != 0) {\r\n                        drawPile.add(new ColoredCard(rank, color));\r\n                    }\r\n                }else if(rank.getRank() > 9 && rank.getRank() < 50){\r\n                    drawPile.add((new ColoredCard(rank, color)));\r\n                    drawPile.add((new ColoredCard(rank, color)));\r\n                }else drawPile.add(new SpecialCard(rank));\r\n            }\r\n        }\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Deck/Deck.java b/src/Deck/Deck.java
+--- a/src/Deck/Deck.java	(revision 16fdbbce56d8ea54961eaffa9156abb7c67fb265)
++++ b/src/Deck/Deck.java	(date 1683030257556)
+@@ -5,6 +5,7 @@
+ 
+ import java.awt.*;
+ import java.util.ArrayList;
++import java.util.Collections;
+ 
+ public class Deck {
+     ArrayList<Card> drawPile;
+@@ -32,4 +33,13 @@
+         }
+     }
+ 
++    public void draw (){
++        drawPile.get(0);
++    }
++
++    public void shuffle(){
++        Collections.shuffle(drawPile);
++    }
++
++
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"801cce4b-42fb-45c1-b07d-b22ab1bdcd9d\" name=\"Changes\" comment=\"base card push\">\r\n      <change beforePath=\"$PROJECT_DIR$/src/card/SpecialCard.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/card/SpecialCard.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Enum\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2PEJZyfuVCOTfAqE5kAhKUs6YOS\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"801cce4b-42fb-45c1-b07d-b22ab1bdcd9d\" name=\"Changes\" comment=\"\" />\r\n      <created>1683016368880</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1683016368880</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"base card push\">\r\n      <created>1683016806978</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683016806978</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"base card push\">\r\n      <created>1683017462220</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683017462220</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"base card push\">\r\n      <created>1683026696807</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683026696807</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"base card push\">\r\n      <created>1683026829748</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683026829748</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"base card push\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"base card push\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 16fdbbce56d8ea54961eaffa9156abb7c67fb265)
++++ b/.idea/workspace.xml	(date 1683029843155)
+@@ -4,8 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="801cce4b-42fb-45c1-b07d-b22ab1bdcd9d" name="Changes" comment="base card push">
+-      <change beforePath="$PROJECT_DIR$/src/card/SpecialCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/card/SpecialCard.java" afterDir="false" />
++    <list default="true" id="3f05a69f-05ca-40fa-a242-0215723fa530" name="Changes" comment="Empty">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Deck/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deck/Deck.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
